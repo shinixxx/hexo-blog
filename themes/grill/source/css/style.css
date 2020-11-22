@@ -1,0 +1,42 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+.onTransition{
+  transition: transform .2s;
+}
+
+
+.onHover:hover{
+  transform: scale(1.025);
+  z-index: 100;
+}
+
+.onButton:hover {
+  transform: translateY(-8px);
+}
+
+.onATags:hover{
+  border: 1px solid white;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.backgroundImage {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.rotate-90 {
+  transform: rotate(-90deg);
+}
+
+.hashtag::before {
+  content: "#";
+}

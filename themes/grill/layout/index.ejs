@@ -1,0 +1,24 @@
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+<% page.posts.forEach(function(post){ %>
+        <div class="onTransition onHover relative bg-black rounded-3xl shadow-lg border border-gray-500 text-white backgroundImage h-64 " style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(<%-post.backgroundImage%>) ;">
+
+            <div class="flex justify-end">
+                    <% if (post.tags && post.tags.length){ %>
+                        <%- list_tags(post.tags, {
+                          show_count: false,
+                          class: {ul:'flex flex-wrap justify-end p-4', li: 'text-center mr-2', a: 'hashtag onATags'}
+                        }) %>
+                      <% } %>  
+                </div>
+                
+
+            <div class="cursor-pointer onTransition onButton shadow-inner absolute bottom-0 left-0 
+            bg-gradient-to-b from-blue-300 via-teal-300 to-blue-600 border-b-2 border-blue-900 
+            rounded-full p-3 m-4 ">
+                <a href="<%- post.path %>" class="m-2 ">
+                    <%- post.title %>
+                </a>
+            </div>
+        </div>
+<% }) %>
+</div>

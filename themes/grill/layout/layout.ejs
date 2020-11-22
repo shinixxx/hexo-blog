@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- css('css/style.css') %>
+</head>
+<body class="p-1 xl:p-4 bg-white">
+    <%- partial('partial/header', {title: 'hello world', customColor: 'pink'}) %>
+    <%- body %>
+
+    <%- js('js/menu.js') %>
+
+</body>
+</html>
